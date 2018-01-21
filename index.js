@@ -1,11 +1,21 @@
 // Code your solutions in this file
-function deleteFromDriverByKey(driver, key) {
-  const newDriver = {...driver}
-  delete newDriver[key];
+function printBadges(array) {
+  let employeeNumber = 0;
+  for (i = 0; i < array.length; i++) {
+    employeeNumber++;
+    console.log(`Welcome ${array[i]}! You are employee #${employeeNumber}.`);
 
-  return newDriver;
+  }
+  return array;
 }
-function destructivelyDeleteFromDriverByKey(driver, key) {
-  delete driver[key];
-  return driver;
+
+function tailsNeverFails() {
+  let tailsCount = 0
+  function coinFlip() {
+    return Math.random() >= .5;
+  }
+  while (coinFlip()) {
+    tailsCount++;
+  }
+  return `You got ${tailsCount} tails in a row!`;
 }
